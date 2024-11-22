@@ -1,0 +1,41 @@
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    overflow-y: auto;
+  }
+  
+  /* Main content styling */
+  .main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    width: calc(100% - 250px); /* Adjust content width to avoid overlap */
+  }
+  .toggle-btn {
+    position: fixed;
+    top: 10px; /* Align with the navbar */
+    left: 260px; /* Place next to the expanded sidebar */
+    z-index: 99999;
+    transition: left 0.3s ease;
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    margin-top: 60px; /* Account for the navbar height */
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.toggled + .main-content {
+    margin-left: 80px; /* Adjust for the collapsed sidebar width */
+  }
+  
+  .toggle-btn.toggled {
+    left: 90px; /* Adjust to match the collapsed sidebar position */
+  }
+  

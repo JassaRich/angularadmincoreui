@@ -1,0 +1,20 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <app-sidebar [isToggled]="isSidebarToggled"></app-sidebar>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Toggle Button -->
+    <button class="btn btn-primary toggle-btn" (click)="toggleSidebar()">
+      <i class="fa" [ngClass]="{'fa-bars': !isSidebarToggled, 'fa-times': isSidebarToggled}"></i>
+    </button>
+
+    <!-- Navbar -->
+    <app-navbar></app-navbar>
+
+    <!-- Page Content -->
+    <div class="container-fluid mt-4">
+      <app-dashboard></app-dashboard>
+    </div>
+  </div>
+</div>

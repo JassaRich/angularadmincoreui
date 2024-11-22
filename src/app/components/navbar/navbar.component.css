@@ -1,0 +1,29 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 250px; /* Adjust based on your sidebar width */
+    width: calc(100% - 250px); /* Adjust for sidebar width */
+    height: 60px; /* Set a fixed height */
+    z-index: 1000;
+  }
+  
+  .navbar.toggled {
+    left: 80px; /* Match the collapsed sidebar width */
+    width: calc(100% - 80px);
+  }
+  
+  .navbar .form-inline .form-control {
+    width: 300px;
+  }
+  
+  .navbar .badge {
+    font-size: 10px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+  }
+  
+  .navbar .nav-link i {
+    font-size: 1.2rem;
+  }
+  
